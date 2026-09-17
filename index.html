@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SafeConnect AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <div class="logo">🔐</div>
+
+            <div>
+                <h1>SafeConnect AI</h1>
+                <p>AI-inspired professional communication safety assistant</p>
+            </div>
+
+        </header>
+
+
+        <section class="card">
+
+            <h2>Analyze a Message</h2>
+
+            <p class="description">
+                Paste a LinkedIn message below to check whether
+                it appears professional, educational, personal,
+                or suspicious.
+            </p>
+
+            <textarea
+                id="messageInput"
+                placeholder="Paste the LinkedIn message here..."
+            ></textarea>
+
+            <button onclick="analyzeMessage()">
+                🔍 Analyze Message
+            </button>
+
+        </section>
+
+
+        <section id="result" class="result hidden">
+
+            <div id="resultIcon"></div>
+
+            <h2 id="resultCategory"></h2>
+
+            <div class="risk-box">
+
+                <span>Risk Level</span>
+
+                <strong id="riskLevel"></strong>
+
+            </div>
+
+
+            <div class="confidence">
+
+                <span>Confidence</span>
+
+                <div class="progress">
+                    <div id="confidenceBar"></div>
+                </div>
+
+                <span id="confidenceText"></span>
+
+            </div>
+
+
+            <p id="reason"></p>
+
+
+            <div class="actions">
+
+                <button
+                    class="safe-button"
+                    onclick="dismissResult()">
+                    ✓ Dismiss
+                </button>
+
+                <button
+                    id="blockButton"
+                    class="block-button"
+                    onclick="blockDemo()">
+                    🚫 Block
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="history card">
+
+            <h2>Message History</h2>
+
+            <div id="historyList">
+
+                <p class="empty">
+                    No messages analyzed yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <p>
+                SafeConnect AI • Project Prototype
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
